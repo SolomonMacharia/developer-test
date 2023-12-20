@@ -5,13 +5,13 @@ import { typeDefs } from './typeDefs';
 import { resolvers } from './resolvers';
 
 const server = new ApolloServer({
-typeDefs,
-resolvers,
+  typeDefs,
+  resolvers,
 });
 
 const { url } = await startStandaloneServer(server, {
-    listen: { port: 4000 },
-  });
+  listen: { port: 4000 },
+});
   
 console.log(`🚀  Server ready at: ${url}`);
   
